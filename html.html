@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <title>WeatherAPI</title>
+  </head>
+  <body>
+    <div class="settings">
+      <div class="settings_search">
+        <span class="settings_text">Write a city: </span>
+        <div class="searchBox">
+          <input id="searchInput" type="search" /><button onclick="onSearch()">
+            OK
+          </button>
+        </div>
+        <div class="settings_timeBox">
+          <span class="settings_text"> Clock: </span>
+          <div class="timeBox">
+            <span id="settings_time"></span>
+          </div>
+        </div>
+      </div>
+      <div class="settings_unit">
+        <span class="settings_text">Unit of measure: </span>
+        <div class="radioBox">
+          <div class="form-check">
+            <input
+              onclick="unit(value)"
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+              value="°C"
+              checked
+            />
+            <label class="form-check-label" for="flexRadioDefault2"> °C </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              onclick="unit(value)"
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+              value="K"
+            />
+            <label class="form-check-label" for="flexRadioDefault1"> K </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              onclick="unit(value)"
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault3"
+              value="°F"
+            />
+            <label class="form-check-label" for="flexRadioDefault3"> °F </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="temperature">
+        <div class="weather"></div>
+        <span id="temperature_numeral"></span>
+        <span id="temperature_type"></span>
+      </div>
+      <div class="country">
+        <span id="country_text"></span>
+      </div>
+    </div>
+    <script src="js.js"></script>
+  </body>
+</html>
